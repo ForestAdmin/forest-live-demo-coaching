@@ -60,7 +60,7 @@ app.use('/forest', (request, response, next) => {
     return next();
   }
 
-  if (request.user.email === 'erlich.bachman@forestadmin.com'
+  if (request.user?.email === 'erlich.bachman@forestadmin.com'
       && request.method !== 'GET'
       && !request.originalUrl.startsWith('/forest/stats')
       && !request.originalUrl.includes('/hooks/load')
